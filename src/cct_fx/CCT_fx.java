@@ -26,7 +26,7 @@ public class CCT_fx extends Application {
             stage.setTitle("Login");
             stage.setScene(scene);
             stage.showAndWait();
-            
+            System.out.println("Stage closed");
         } catch (Exception e) {
             System.out.println("Exception: " + e.toString());
         }
