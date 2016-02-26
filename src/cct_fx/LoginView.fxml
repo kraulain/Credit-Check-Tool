@@ -28,10 +28,10 @@
             <Image url="@cctLogo.jpg" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" text="User Name:" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Label alignment="CENTER" styleClass="login-label" stylesheets="@style.css" text="User Name:" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
       <TextField fx:id="userName_txt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
       <PasswordField fx:id="password_txt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-      <Label alignment="CENTER" text="Password:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Label alignment="CENTER" styleClass="login-label" text="Password:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
       <Button fx:id="login_btn" mnemonicParsing="false" onAction="#handelLoginAction" text="Login" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
       <Label fx:id="error_lbl" alignment="CENTER" contentDisplay="CENTER" styleClass="error" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
    </children>

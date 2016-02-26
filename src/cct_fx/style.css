@@ -20,13 +20,20 @@
 .label {
     -fx-font-family: "Arial";
     -fx-font-size: 14;
-    -fx-text-fill: rgba(255, 255, 255, 0.4);
+    -fx-text-fill: #d0d0d0;
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+
+.login-label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14;
+    -fx-text-fill: navy;
     -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
 }
 
 .error {
     -fx-font-family: "Arial";
-    -fx-font-size: 14;
+    -fx-font-size: 20;
     -fx-text-fill: firebrick;
     -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
 }

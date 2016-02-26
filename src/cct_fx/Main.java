@@ -7,13 +7,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class CCT_fx extends Application {
+public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        login();
+
         
-        Platform.exit();
+        login();
+        showHome();
+        exit();
     }
 
     public void login() {
@@ -26,10 +28,30 @@ public class CCT_fx extends Application {
             stage.setTitle("Login");
             stage.setScene(scene);
             stage.showAndWait();
-            System.out.println("Stage closed");
+
         } catch (Exception e) {
             System.out.println("Exception: " + e.toString());
         }
+    }
+
+    public void showHome() {
+        try {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("HomeView.fxml"));
+
+            Scene scene = new Scene(root);
+            stage.setTitle("Credit Check Tool V-15.02");
+            stage.setScene(scene);
+            stage.showAndWait();
+            
+        } catch (Exception e) {
+            System.out.println("Exception " + e.toString());
+        }
+    }
+    
+    private void exit(){
+        Platform.exit();
+        System.exit(0);
     }
 
     /**

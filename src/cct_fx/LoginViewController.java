@@ -26,14 +26,17 @@ public class LoginViewController implements Initializable {
         String passWord = password_txt.getText().trim();
         UsersDao usersDao = new UsersDao();
         Boolean valid = usersDao.authenticate(userName, passWord);
+        Stage stage = (Stage) error_lbl.getScene().getWindow();
+        
         if(!valid){
             error_lbl.setText("Invalid Credentials");
         }else{
-            error_lbl.setText("OK");
-            Stage stage = (Stage) error_lbl.getScene().getWindow();
+            error_lbl.setText("OK");            
             stage.close();
         }
+        
     }
+   
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
