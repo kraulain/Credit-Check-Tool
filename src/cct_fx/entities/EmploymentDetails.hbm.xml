@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2016 4:18:35 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cct_fx.entities.EmploymentDetails" table="employment_details" catalog="cct_db" optimistic-lock="version">
+        <id name="clientId" type="int">
+            <column name="client_id" />
+            <generator class="foreign">
+                <param name="property">personalDetails</param>
+            </generator>
+        </id>
+        <one-to-one name="personalDetails" class="cct_fx.entities.PersonalDetails" constrained="true"></one-to-one>
+        <many-to-one name="previousEmployment" class="cct_fx.entities.PreviousEmployment" fetch="select">
+            <column name="previous_emp_id" />
+        </many-to-one>
+        <property name="occupation" type="string">
+            <column name="occupation" length="25" not-null="true" />
+        </property>
+        <property name="employmentStatus" type="string">
+            <column name="employment_status" length="25" not-null="true" />
+        </property>
+        <property name="employerName" type="string">
+            <column name="employer_name" length="50" not-null="true" />
+        </property>
+        <property name="employerAddress" type="string">
+            <column name="employer_address" length="25" not-null="true" />
+        </property>
+        <property name="employmentDate" type="date">
+            <column name="employment_date" length="10" not-null="true" />
+        </property>
+        <property name="paymentFrequency" type="short">
+            <column name="payment_frequency" not-null="true" />
+        </property>
+        <property name="paymentMode" type="string">
+            <column name="payment_mode" length="25" />
+        </property>
+        <property name="minAnnualSalary" type="long">
+            <column name="min_annual_salary" not-null="true" />
+        </property>
+        <property name="hasIncomeProof" type="boolean">
+            <column name="has_income_proof" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

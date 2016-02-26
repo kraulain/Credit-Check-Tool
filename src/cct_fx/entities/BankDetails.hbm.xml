@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2016 4:18:35 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cct_fx.entities.BankDetails" table="bank_details" catalog="cct_db" optimistic-lock="version">
+        <id name="clientId" type="int">
+            <column name="client_id" />
+            <generator class="foreign">
+                <param name="property">personalDetails</param>
+            </generator>
+        </id>
+        <one-to-one name="personalDetails" class="cct_fx.entities.PersonalDetails" constrained="true"></one-to-one>
+        <property name="startDate" type="date">
+            <column name="start_date" length="10" not-null="true" />
+        </property>
+        <property name="accountType" type="string">
+            <column name="account_type" length="25" not-null="true" />
+        </property>
+        <property name="accountName" type="string">
+            <column name="account_name" length="45" not-null="true" />
+        </property>
+        <property name="hasBankStatement" type="boolean">
+            <column name="has_bank_statement" not-null="true" />
+        </property>
+        <property name="numberOfAccounts" type="short">
+            <column name="number_of_accounts" not-null="true" />
+        </property>
+        <property name="outstandingLoan" type="long">
+            <column name="outstanding_loan" not-null="true" />
+        </property>
+        <property name="monthlyRepayment" type="string">
+            <column name="monthly_repayment" length="16777215" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

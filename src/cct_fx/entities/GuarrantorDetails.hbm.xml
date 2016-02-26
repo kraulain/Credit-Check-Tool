@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2016 4:18:35 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cct_fx.entities.GuarrantorDetails" table="guarrantor_details" catalog="cct_db" optimistic-lock="version">
+        <id name="guarantorId" type="java.lang.Integer">
+            <column name="guarantor_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="personalDetails" class="cct_fx.entities.PersonalDetails" fetch="select">
+            <column name="client_id" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="occupation" type="string">
+            <column name="occupation" length="45" not-null="true" />
+        </property>
+        <property name="relationship" type="string">
+            <column name="relationship" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

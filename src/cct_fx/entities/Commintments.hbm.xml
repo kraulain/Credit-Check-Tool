@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2016 4:18:35 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cct_fx.entities.Commintments" table="commintments" catalog="cct_db" optimistic-lock="version">
+        <id name="clientId" type="int">
+            <column name="client_id" />
+            <generator class="foreign">
+                <param name="property">personalDetails</param>
+            </generator>
+        </id>
+        <one-to-one name="personalDetails" class="cct_fx.entities.PersonalDetails" constrained="true"></one-to-one>
+        <property name="rents" type="string">
+            <column name="rents" length="16777215" not-null="true" />
+        </property>
+        <property name="loans" type="string">
+            <column name="loans" length="16777215" not-null="true" />
+        </property>
+        <property name="njangis" type="string">
+            <column name="njangis" length="16777215" not-null="true" />
+        </property>
+        <property name="household" type="string">
+            <column name="household" length="16777215" not-null="true" />
+        </property>
+        <property name="bills" type="string">
+            <column name="bills" length="16777215" not-null="true" />
+        </property>
+        <property name="mobilePhone" type="string">
+            <column name="mobile_phone" length="16777215" not-null="true" />
+        </property>
+        <property name="transport" type="string">
+            <column name="transport" length="16777215" not-null="true" />
+        </property>
+        <property name="others" type="string">
+            <column name="others" length="16777215" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

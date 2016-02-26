@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="cct_db"/>
+  <table-filter match-name="guarrantor_details"/>
+  <table-filter match-name="bank_details"/>
+  <table-filter match-name="previous_employment"/>
+  <table-filter match-name="users"/>
+  <table-filter match-name="additional_info"/>
+  <table-filter match-name="reference"/>
+  <table-filter match-name="employment_details"/>
+  <table-filter match-name="monthly_income"/>
+  <table-filter match-name="personal_details"/>
+  <table-filter match-name="commintments"/>
+  <table-filter match-name="loan_details"/>
+</hibernate-reverse-engineering>

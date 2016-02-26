@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cct_db?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">toor</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="cct_fx/entities/PersonalDetails.hbm.xml"/>
+    <mapping resource="cct_fx/entities/EmploymentDetails.hbm.xml"/>
+    <mapping resource="cct_fx/entities/PreviousEmployment.hbm.xml"/>
+    <mapping resource="cct_fx/entities/Reference.hbm.xml"/>
+    <mapping resource="cct_fx/entities/LoanDetails.hbm.xml"/>
+    <mapping resource="cct_fx/entities/BankDetails.hbm.xml"/>
+    <mapping resource="cct_fx/entities/AdditionalInfo.hbm.xml"/>
+    <mapping resource="cct_fx/entities/Users.hbm.xml"/>
+    <mapping resource="cct_fx/entities/MonthlyIncome.hbm.xml"/>
+    <mapping resource="cct_fx/entities/Commintments.hbm.xml"/>
+    <mapping resource="cct_fx/entities/GuarrantorDetails.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
